@@ -23,8 +23,8 @@ while True:
     
     inputKey = cv2.waitKey(1)
     if inputKey == ord('c'):
-        status = cv2.imwrite('/home/user/Project/faceRag/myProject/pic'+str(picCount)+'.jpg',frame)
-        print('/home/user/Project/faceRag/myProject/pic'+str(picCount)+'.jpg have been saved.')
+        status = cv2.imwrite('/home/user/Project/faceRag/my-NewData/pic'+str(picCount)+'.jpg',frame)
+        print('/home/user/Project/faceRag/my-NewData/pic'+str(picCount)+'.jpg have been saved.')
         picCount += 1
         inputKey = -2
     elif inputKey == ord('q'):

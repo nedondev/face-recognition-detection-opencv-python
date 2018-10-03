@@ -6,7 +6,6 @@ while True:
         print('Unable to load camera.')
         sleep(5)
         pass
-
     # Capture frame-by-frame
     ret, frame = video_capture.read()
 
