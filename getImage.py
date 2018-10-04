@@ -68,7 +68,7 @@ def drawRectangle(test_img):
 # In[7]:
 
 
-video_capture = cv2.VideoCapture(1)
+video_capture = cv2.VideoCapture(0)
 picCount = 0
 
 while True:

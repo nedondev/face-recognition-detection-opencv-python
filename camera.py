@@ -1,5 +1,6 @@
 import cv2
-video_capture = cv2.VideoCapture(1)
+from time import sleep
+video_capture = cv2.VideoCapture(0)
 
 while True:
     if not video_capture.isOpened():

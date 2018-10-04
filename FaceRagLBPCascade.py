@@ -9,7 +9,13 @@ import os
 import numpy as np
 from time import sleep
 
-
+#SETTINGS
+facesList, labelsList = [[],[],[],[]], [[],[],[],[]]
+subjects = ["Box1", "Box2", "Box3", "Box4"]
+CONFIDENT_RATE = 50
+STREAM_NAME = "Face unlock Locker"
+REGISTER_FACE_SIZE = 40000
+CAMERA_NUM = 0
 # In[2]:
 
 
@@ -151,13 +157,8 @@ def predict(test_img, face_recognizer):
 # In[16]:
 
 
-facesList, labelsList = [[],[],[],[]], [[],[],[],[]]
-subjects = ["Box1", "Box2", "Box3", "Box4"]
-CONFIDENT_RATE = 50
-STREAM_NAME = "Face unlock Locker"
-REGISTER_FACE_SIZE = 40000
 def main():
-    video_capture = cv2.VideoCapture(1)
+    video_capture = cv2.VideoCapture(CAMERA_NUM)
     face_recognizer = cv2.face.LBPHFaceRecognizer_create()
     trained = False
     while True:
